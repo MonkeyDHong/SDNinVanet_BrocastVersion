@@ -458,13 +458,13 @@ void VanetSim::ConfigApp()
 
 		// change setcontrollArea
 		Ptr<sdn::RoutingProtocol> routing = m_nodes.Get (nodeNum)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (0,1000), Vector2D (990,1010));//
+		routing->SetControllArea (Vector2D (990,1010),Vector2D (0,1000));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+1)->GetObject<sdn::RoutingProtocol> ();
 		routing->SetControllArea (Vector2D (0,990), Vector2D (990,1000));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+2)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (990,0), Vector2D (1000,990));//
+		routing->SetControllArea (Vector2D (1000,990),Vector2D (990,0));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+3)->GetObject<sdn::RoutingProtocol> ();
 		routing->SetControllArea (Vector2D (1000,0), Vector2D (1010,990));
@@ -473,13 +473,13 @@ void VanetSim::ConfigApp()
 		routing->SetControllArea (Vector2D (1010,990), Vector2D (2000,1000));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+5)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (1010,1000), Vector2D (2000,1010));//
+		routing->SetControllArea (Vector2D (2000,1010),Vector2D (1010,1000));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+6)->GetObject<sdn::RoutingProtocol> ();
 		routing->SetControllArea (Vector2D (1000,1010), Vector2D (1010,2000));
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+7)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (990,1010), Vector2D (1000,2000));//
+		routing->SetControllArea (Vector2D (1000,2000),Vector2D (990,1010));//
 		routing->SetAlgo (ToBeSet);
 	}
 
@@ -522,8 +522,8 @@ void VanetSim::ConfigApp()
 			Source.SetAttribute("PacketSize", UintegerValue (packetSize));
 			//install on node and set start time and stop time
 			m_source = Source.Install(m_nodes.Get(nodeNum+numofLC+i));//Insatll on Source1
-			m_source.Start(Seconds(140.0+i*0.01));
-			m_source.Stop(Seconds(250.0+i*0.01));//Default Start time is 0.
+			m_source.Start(Seconds(140.0+i*0.1));
+			m_source.Stop(Seconds(250.0+i*0.1));//Default Start time is 0.
 
 		    //statistics:trace function recall
 			std::string temp1 = "/NodeList/"+std::to_string (nodeNum+numofLC+i)+"/ApplicationList/0/$ns3::OnOffApplication/Tx";
