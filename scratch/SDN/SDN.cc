@@ -522,8 +522,8 @@ void VanetSim::ConfigApp()
 			Source.SetAttribute("PacketSize", UintegerValue (packetSize));
 			//install on node and set start time and stop time
 			m_source = Source.Install(m_nodes.Get(nodeNum+numofLC+i));//Insatll on Source1
-			m_source.Start(Seconds(140.0+i*0.1));
-			m_source.Stop(Seconds(250.0+i*0.1));//Default Start time is 0.
+			m_source.Start(Seconds(140.0+i*0.01));
+			m_source.Stop(Seconds(250.0+i*0.01));//Default Start time is 0.
 
 		    //statistics:trace function recall
 			std::string temp1 = "/NodeList/"+std::to_string (nodeNum+numofLC+i)+"/ApplicationList/0/$ns3::OnOffApplication/Tx";
