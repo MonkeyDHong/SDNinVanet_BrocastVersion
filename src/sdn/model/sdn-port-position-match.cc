@@ -35,89 +35,99 @@ Port_Position_Match::Port_Position_Match ()
 	m_port6 = 65424;
 	m_port7 = 65425;
 	m_port8 = 65426;
-	m_port9 = 65427;
-	m_port10 = 65428;
-	m_port11 = 65429;
-	m_port12 = 65430;
+
 
 	m_controlAreaMap.clear();
 	ControlAreaList templist;
 	ControlArea temp;
-	temp.first=Vector2D (0,990),temp.second=Vector2D (990,1000);
+	temp.first=Vector2D (990,3000),temp.second=Vector2D (1000,2010);
 	templist.push_back(temp);
-	temp.first=Vector2D (990,990),temp.second=Vector2D (1000,0);
+	temp.first=Vector2D (990,1990),temp.second=Vector2D (1000,1010);
+	templist.push_back(temp);
+	temp.first=Vector2D (1010,990),temp.second=Vector2D (1990,1000);
+	templist.push_back(temp);
+	temp.first=Vector2D (2010,990),temp.second=Vector2D (3000,1000);
 	templist.push_back(temp);
 	m_controlAreaMap[m_port1] = templist;
+
 	templist.clear();
-	temp.first=Vector2D (0,990),temp.second=Vector2D (990,1000);
+	temp.first=Vector2D (0,1990),temp.second=Vector2D (990,2000);
 	templist.push_back(temp);
-	temp.first=Vector2D (1010,990),temp.second=Vector2D (2000,1000);
+	temp.first=Vector2D (1010,1990),temp.second=Vector2D (1990,2000);
+	templist.push_back(temp);
+	temp.first=Vector2D (1990,1990),temp.second=Vector2D (2000,1010);
+	templist.push_back(temp);
+	temp.first=Vector2D (1990,990),temp.second=Vector2D (2000,0);
 	templist.push_back(temp);
 	m_controlAreaMap[m_port2] = templist;
+
 	templist.clear();
 	temp.first=Vector2D (0,990),temp.second=Vector2D (990,1000);
 	templist.push_back(temp);
-	temp.first=Vector2D (1000,1010),temp.second=Vector2D (1010,2000);
+	temp.first=Vector2D (1010,990),temp.second=Vector2D (1990,1000);
+	templist.push_back(temp);
+	temp.first=Vector2D (2000,1010),temp.second=Vector2D (2010,1990);
+	templist.push_back(temp);
+	temp.first=Vector2D (2000,2010),temp.second=Vector2D (2010,3000);
 	templist.push_back(temp);
 	m_controlAreaMap[m_port3] = templist;
 	templist.clear();
 
 	temp.first=Vector2D (1000,0),temp.second=Vector2D (1010,990);
 	templist.push_back(temp);
-	temp.first=Vector2D (1010,990),temp.second=Vector2D (2000,1000);
+	temp.first=Vector2D (1000,1010),temp.second=Vector2D (1010,1990);
+	templist.push_back(temp);
+	temp.first=Vector2D (1010,1990),temp.second=Vector2D (1990,2000);
+	templist.push_back(temp);
+	temp.first=Vector2D (2010,1990),temp.second=Vector2D (3000,2000);
 	templist.push_back(temp);
 	m_controlAreaMap[m_port4] = templist;
+
 	templist.clear();
-	temp.first=Vector2D (1000,0),temp.second=Vector2D (1010,990);
+	temp.first=Vector2D (2000,0),temp.second=Vector2D (2010,990);
 	templist.push_back(temp);
-	temp.first=Vector2D (1000,1010),temp.second=Vector2D (1010,2000);
+	temp.first=Vector2D (2000,1010),temp.second=Vector2D (2010,1990);
+	templist.push_back(temp);
+	temp.first=Vector2D (1990,2010),temp.second=Vector2D (1010,2000);
+	templist.push_back(temp);
+	temp.first=Vector2D (990,2010),temp.second=Vector2D (0,2000);
 	templist.push_back(temp);
 	m_controlAreaMap[m_port5] = templist;
+
 	templist.clear();
-	temp.first=Vector2D (1000,0),temp.second=Vector2D (1010,990);
+	temp.first=Vector2D (3000,1010),temp.second=Vector2D (2010,990);
 	templist.push_back(temp);
-	temp.first=Vector2D (0,1000),temp.second=Vector2D (990,1010);
+	temp.first=Vector2D (1990,1010),temp.second=Vector2D (1010,990);
+	templist.push_back(temp);
+	temp.first=Vector2D (1000,1010),temp.second=Vector2D (1010,1990);
+	templist.push_back(temp);
+	temp.first=Vector2D (1000,2010),temp.second=Vector2D (1010,3000);
 	templist.push_back(temp);
 	m_controlAreaMap[m_port6] = templist;
-	templist.clear();
 
-	temp.first=Vector2D (1010,1000),temp.second=Vector2D (2000,1010);
+	templist.clear();
+	temp.first=Vector2D (3000,2010),temp.second=Vector2D (2010,2000);
 	templist.push_back(temp);
-	temp.first=Vector2D (1000,1010),temp.second=Vector2D (1010,2000);
+	temp.first=Vector2D (1990,2010),temp.second=Vector2D (1010,2000);
+	templist.push_back(temp);
+	temp.first=Vector2D (990,1990),temp.second=Vector2D (1000,1010);
+	templist.push_back(temp);
+	temp.first=Vector2D (990,990),temp.second=Vector2D (1000,0);
 	templist.push_back(temp);
 	m_controlAreaMap[m_port7] = templist;
+
 	templist.clear();
-	temp.first=Vector2D (1010,1000),temp.second=Vector2D (2000,1010);
+	temp.first=Vector2D (1990,3000),temp.second=Vector2D (2000,2010);
 	templist.push_back(temp);
-	temp.first=Vector2D (0,1000),temp.second=Vector2D (990,1010);
+	temp.first=Vector2D (1990,1990),temp.second=Vector2D (2000,1010);
+	templist.push_back(temp);
+	temp.first=Vector2D (1990,1010),temp.second=Vector2D (1010,990);
+	templist.push_back(temp);
+	temp.first=Vector2D (990,1010),temp.second=Vector2D (0,1000);
 	templist.push_back(temp);
 	m_controlAreaMap[m_port8] = templist;
 	templist.clear();
-	temp.first=Vector2D (1010,1000),temp.second=Vector2D (2000,1010);
-	templist.push_back(temp);
-	temp.first=Vector2D (990,0),temp.second=Vector2D (1000,990);
-	templist.push_back(temp);
-	m_controlAreaMap[m_port9] = templist;
-	templist.clear();
 
-	temp.first=Vector2D (990,1010),temp.second=Vector2D (1000,2000);
-	templist.push_back(temp);
-	temp.first=Vector2D (0,1000),temp.second=Vector2D (990,1010);
-	templist.push_back(temp);
-	m_controlAreaMap[m_port10] = templist;
-	templist.clear();
-	temp.first=Vector2D (990,1010),temp.second=Vector2D (1000,2000);
-	templist.push_back(temp);
-	temp.first=Vector2D (990,0),temp.second=Vector2D (1000,990);
-	templist.push_back(temp);
-	m_controlAreaMap[m_port11] = templist;
-	templist.clear();
-	temp.first=Vector2D (990,1010),temp.second=Vector2D (1000,2000);
-	templist.push_back(temp);
-	temp.first=Vector2D (1010,990),temp.second=Vector2D (2000,1000);
-	templist.push_back(temp);
-	m_controlAreaMap[m_port12] = templist;
-	templist.clear();
 };
 
 bool
@@ -131,11 +141,13 @@ Port_Position_Match::CheckThis (uint16_t port, Vector position)
 		{
 			if(IsInTheArea(position,*it))
 			{
+				 std::cout<<"pass?"<<port<<std::endl;
 				return true;
 			}
 		}
 		return false;
 	}
+	 std::cout<<"what?"<<port<<std::endl;
 	return true;
 }
 

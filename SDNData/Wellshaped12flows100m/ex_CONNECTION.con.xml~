@@ -1,0 +1,10 @@
+<connections>
+<connection from="edge-11-8" to="edge-8-4"/>
+<connection from="edge-7-8" to="edge-8-9"/>
+<connection from="edge-3-4" to="edge-4-5"/>
+<connection from="edge-1-4" to="edge-4-8"/>
+<connection from="edge-2-5" to="edge-5-9"/>
+<connection from="edge-6-5" to="edge-5-4"/>
+<connection from="edge-10-9" to="edge-9-8"/>
+<connection from="edge-12-9" to="edge-9-5"/>
+</connections>

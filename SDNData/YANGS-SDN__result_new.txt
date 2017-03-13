@@ -1,22 +1,2 @@
 Mode:  YANGS-SDNDataSet:  
-Starting simulation for 2151 s ...
-NO PACKETS WERE RECEIVED.
-Best delay:   2876us
-Worst delay:   3712us
-Avg delay: 3227.36us
-Best delay:   2875us
-Worst delay:   3712us
-Avg delay: 3178.43us
-Best delay:   2456us
-Worst delay:   3712us
-Avg delay: 3121.29us
-Best delay:   2458us
-Worst delay:   3294us
-Avg delay: 3117.51us
-NO PACKETS WERE RECEIVED.
-NO PACKETS WERE RECEIVED.
-NO PACKETS WERE RECEIVED.
-NO PACKETS WERE RECEIVED.
-NO PACKETS WERE RECEIVED.
-NO PACKETS WERE RECEIVED.
-NO PACKETS WERE RECEIVED.
+Starting simulation for 1465 s ...

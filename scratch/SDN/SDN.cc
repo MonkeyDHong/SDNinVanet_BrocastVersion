@@ -48,9 +48,9 @@ VanetSim::VanetSim()
 	duration = -1;
 	mod = 1;
 	nodeNum = 0;
-	numofLC = 8;
-	numofSource = 12;
-	numofSink = 12;
+	numofLC = 24;
+	numofSource = 8;
+	numofSink = 8;
 
 	//source communication port
 	//statistic
@@ -189,7 +189,7 @@ void VanetSim::LoadTraffic()
 
 void VanetSim::ConfigNode()
 {
-	m_nodes.Create(nodeNum+32);//Cars + LC1-8+Source1-12+Sink1-12
+	m_nodes.Create(nodeNum+numofLC+numofSource+numofSink);//Cars + LC+Source+Sink
 	/*Only Apps Are Different Between Different kind of Nodes*/
 	// Name nodes
 	for (uint32_t i = 0; i < nodeNum; ++i)
@@ -298,71 +298,88 @@ void VanetSim::ConfigMobility()
 
 	//add fixed node
 		Ptr<MobilityModel> Temp = m_nodes.Get(nodeNum)->GetObject<MobilityModel>();//LC1
-		Temp->SetPosition(Vector(500.0, 1010.0, 0.0));
+		Temp->SetPosition(Vector(1010.0, 2500.0, 0.0));
 		Temp = m_nodes.Get(nodeNum+1)->GetObject<MobilityModel>();//LC2
-		Temp->SetPosition(Vector(500.0, 990.0, 0.0));
+		Temp->SetPosition(Vector(990.0, 2500.0, 0.0));
 		Temp = m_nodes.Get(nodeNum+2)->GetObject<MobilityModel>();//LC3
-		Temp->SetPosition(Vector(990.0, 500.0, 0.0));
+		Temp->SetPosition(Vector(500.0, 2010.0, 0.0));
 		Temp = m_nodes.Get(nodeNum+3)->GetObject<MobilityModel>();//LC4
-		Temp->SetPosition(Vector(1010.0, 500.0, 0.0));
+		Temp->SetPosition(Vector(500.0, 1990.0, 0.0));
 		Temp = m_nodes.Get(nodeNum+4)->GetObject<MobilityModel>();//LC5
-		Temp->SetPosition(Vector(1500.0, 990.0, 0.0));
+		Temp->SetPosition(Vector(500.0, 1010.0, 0.0));
 		Temp = m_nodes.Get(nodeNum+5)->GetObject<MobilityModel>();//LC6
-		Temp->SetPosition(Vector(1500.0, 1010.0, 0.0));
+		Temp->SetPosition(Vector(500.0, 990.0, 0.0));
 		Temp = m_nodes.Get(nodeNum+6)->GetObject<MobilityModel>();//LC7
-		Temp->SetPosition(Vector(1010.0, 1500.0, 0.0));
+		Temp->SetPosition(Vector(990.0, 500.0, 0.0));
 		Temp = m_nodes.Get(nodeNum+7)->GetObject<MobilityModel>();//LC8
+		Temp->SetPosition(Vector(1010.0, 500.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+8)->GetObject<MobilityModel>();//LC9
+		Temp->SetPosition(Vector(1990.0, 500.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+9)->GetObject<MobilityModel>();//LC10
+		Temp->SetPosition(Vector(2010.0, 500.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+10)->GetObject<MobilityModel>();//LC11
+		Temp->SetPosition(Vector(2500.0, 990.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+11)->GetObject<MobilityModel>();//LC12
+		Temp->SetPosition(Vector(2500.0, 1010.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+12)->GetObject<MobilityModel>();//LC13
+		Temp->SetPosition(Vector(2500.0, 1990.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+13)->GetObject<MobilityModel>();//LC14
+		Temp->SetPosition(Vector(2500.0, 2010.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+14)->GetObject<MobilityModel>();//LC15
+		Temp->SetPosition(Vector(2010.0, 2500.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+15)->GetObject<MobilityModel>();//LC16
+		Temp->SetPosition(Vector(1990.0, 2500.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+16)->GetObject<MobilityModel>();//LC17
+		Temp->SetPosition(Vector(1500.0, 2010.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+17)->GetObject<MobilityModel>();//LC18
+		Temp->SetPosition(Vector(1500.0, 1990.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+18)->GetObject<MobilityModel>();//LC19
 		Temp->SetPosition(Vector(990.0, 1500.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+19)->GetObject<MobilityModel>();//LC20
+		Temp->SetPosition(Vector(1010.0, 1500.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+20)->GetObject<MobilityModel>();//LC21
+		Temp->SetPosition(Vector(1500.0, 990.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+21)->GetObject<MobilityModel>();//LC22
+		Temp->SetPosition(Vector(1500.0, 1010.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+22)->GetObject<MobilityModel>();//LC23
+		Temp->SetPosition(Vector(2010.0, 1500.0, 0.0));
+		Temp = m_nodes.Get(nodeNum+23)->GetObject<MobilityModel>();//LC24
+		Temp->SetPosition(Vector(1990.0, 1500.0, 0.0));
 
-	    Temp = m_nodes.Get(nodeNum+8)->GetObject<MobilityModel>();//Source1
-	    Temp->SetPosition(Vector(-150.0, 992.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+9)->GetObject<MobilityModel>();//Source2
-	    Temp->SetPosition(Vector(-150.0, 993.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+10)->GetObject<MobilityModel>();//Source3
-	    Temp->SetPosition(Vector(-150.0, 994.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+11)->GetObject<MobilityModel>();//Source4
-	    Temp->SetPosition(Vector(1002.0, -150.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+12)->GetObject<MobilityModel>();//Source5
-	    Temp->SetPosition(Vector(1003.0, -150.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+13)->GetObject<MobilityModel>();//Source6
-	    Temp->SetPosition(Vector(1004.0, -150.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+14)->GetObject<MobilityModel>();//Source7
-	    Temp->SetPosition(Vector(2150.0, 1002.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+15)->GetObject<MobilityModel>();//Source8
-	    Temp->SetPosition(Vector(2150.0, 1003.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+16)->GetObject<MobilityModel>();//Source9
-	    Temp->SetPosition(Vector(2150.0, 1004.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+17)->GetObject<MobilityModel>();//Source10
-	    Temp->SetPosition(Vector(992.0, 2150.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+18)->GetObject<MobilityModel>();//Source11
-	    Temp->SetPosition(Vector(993.0, 2150.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+19)->GetObject<MobilityModel>();//Source12
-	    Temp->SetPosition(Vector(994.0, 2150.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+24)->GetObject<MobilityModel>();//Source1
+	    Temp->SetPosition(Vector(995.0, 3150.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+25)->GetObject<MobilityModel>();//Source2
+	    Temp->SetPosition(Vector(-150.0, 1995.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+26)->GetObject<MobilityModel>();//Source3
+	    Temp->SetPosition(Vector(-150.0, 995.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+27)->GetObject<MobilityModel>();//Source4
+	    Temp->SetPosition(Vector(1005.0, -150.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+28)->GetObject<MobilityModel>();//Source5
+	    Temp->SetPosition(Vector(2005.0, -150.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+29)->GetObject<MobilityModel>();//Source6
+	    Temp->SetPosition(Vector(3150.0, 1005.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+30)->GetObject<MobilityModel>();//Source7
+	    Temp->SetPosition(Vector(3150.0, 2005.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+31)->GetObject<MobilityModel>();//Source8
+	    Temp->SetPosition(Vector(1995.0, 3150.0, 0.0));
 
-	    Temp = m_nodes.Get(nodeNum+20)->GetObject<MobilityModel>();//Sink1
-	    Temp->SetPosition(Vector(992.0, 0.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+21)->GetObject<MobilityModel>();//Sink2
-	    Temp->SetPosition(Vector(2000.0, 992.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+22)->GetObject<MobilityModel>();//Sink3
-	    Temp->SetPosition(Vector(1002.0, 2000.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+23)->GetObject<MobilityModel>();//Sink4
-	    Temp->SetPosition(Vector(2000.0, 993.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+24)->GetObject<MobilityModel>();//Sink5
-	    Temp->SetPosition(Vector(1003.0, 2000.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+25)->GetObject<MobilityModel>();//Sink6
-	    Temp->SetPosition(Vector(0.0, 1003.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+26)->GetObject<MobilityModel>();//Sink7
-	    Temp->SetPosition(Vector(1004.0, 2000.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+27)->GetObject<MobilityModel>();//Sink8
-	    Temp->SetPosition(Vector(0.0, 1004.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+28)->GetObject<MobilityModel>();//Sink9
-	    Temp->SetPosition(Vector(994.0, 0.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+29)->GetObject<MobilityModel>();//Sink10
-	    Temp->SetPosition(Vector(0.0, 1005.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+30)->GetObject<MobilityModel>();//Sink11
+	    Temp = m_nodes.Get(nodeNum+32)->GetObject<MobilityModel>();//Sink1
+	    Temp->SetPosition(Vector(3000.0, 995.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+33)->GetObject<MobilityModel>();//Sink2
+	    Temp->SetPosition(Vector(1995.0, 0.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+34)->GetObject<MobilityModel>();//Sink3
+	    Temp->SetPosition(Vector(2005.0, 3000.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+35)->GetObject<MobilityModel>();//Sink4
+	    Temp->SetPosition(Vector(3000.0, 1995.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+36)->GetObject<MobilityModel>();//Sink5
+	    Temp->SetPosition(Vector(0.0, 2005.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+37)->GetObject<MobilityModel>();//Sink6
+	    Temp->SetPosition(Vector(1005.0, 3000.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+38)->GetObject<MobilityModel>();//Sink7
 	    Temp->SetPosition(Vector(995.0, 0.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+31)->GetObject<MobilityModel>();//Sink12
-	    Temp->SetPosition(Vector(2000.0, 995.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+39)->GetObject<MobilityModel>();//Sink8
+	    Temp->SetPosition(Vector(0.0, 1005.0, 0.0));
+
 }
 
 void VanetSim::ConfigApp()
@@ -458,28 +475,76 @@ void VanetSim::ConfigApp()
 
 		// change setcontrollArea
 		Ptr<sdn::RoutingProtocol> routing = m_nodes.Get (nodeNum)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (990,1010),Vector2D (0,1000));//
+		routing->SetControllArea (Vector2D (1000,2010),Vector2D (1010,3000));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+1)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (0,990), Vector2D (990,1000));//
+		routing->SetControllArea (Vector2D (990,3000), Vector2D (1000,2010));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+2)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (1000,990),Vector2D (990,0));//
+		routing->SetControllArea (Vector2D (990,2010),Vector2D (0,2000));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+3)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (1000,0), Vector2D (1010,990));
+		routing->SetControllArea (Vector2D (0,1990), Vector2D (990,2000));
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+4)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (1010,990), Vector2D (2000,1000));//
+		routing->SetControllArea (Vector2D (990,1010), Vector2D (0,1000));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+5)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (2000,1010),Vector2D (1010,1000));//
+		routing->SetControllArea (Vector2D (0,990),Vector2D (990,1000));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+6)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (1000,1010), Vector2D (1010,2000));
+		routing->SetControllArea (Vector2D (990,990), Vector2D (1000,0));
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+7)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (1000,2000),Vector2D (990,1010));//
+		routing->SetControllArea (Vector2D (1000,0),Vector2D (1010,990));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+8)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (1990,990), Vector2D (2000,0));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+9)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (2000,0),Vector2D (2010,990));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+10)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (2010,990), Vector2D (3000,1000));
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+11)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (3000,1010), Vector2D (2010,990));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+12)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (2010,1990),Vector2D (3000,2000));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+13)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (3000,2010), Vector2D (2010,2000));
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+14)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (2000,2010),Vector2D (2010,3000));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+15)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (1990,3000), Vector2D (2000,2010));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+16)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (1990,2010),Vector2D (1010,2000));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+17)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (1010,1990), Vector2D (1990,2000));
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+18)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (990,1990), Vector2D (1000,1010));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+19)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (1000,1010),Vector2D (1010,1990));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+20)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (1010,990), Vector2D (1990,1000));
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+21)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (1990,1010),Vector2D (1010,990));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+22)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (2000,1010),Vector2D (2010,1990));//
+		routing->SetAlgo (ToBeSet);
+		routing = m_nodes.Get (nodeNum+23)->GetObject<sdn::RoutingProtocol> ();
+		routing->SetControllArea (Vector2D (1990,1990),Vector2D (2000,1010));//
 		routing->SetAlgo (ToBeSet);
 	}
 
@@ -513,7 +578,7 @@ void VanetSim::ConfigApp()
 			//set data rate
 
 			//set ontime:duration of ontime will send data
-			Source.SetAttribute("OnTime",StringValue ("ns3::ConstantRandomVariable[Constant=1]"));
+			Source.SetAttribute("OnTime",StringValue ("ns3::ConstantRandomVariable[Constant=0.1]"));
 
 			//set offtime:duration of offtime willnot send data
 			//Source.SetAttribute("OffTime",StringValue ("ns3::ConstantRandomVariable[Constant=0.0]"));
@@ -522,8 +587,8 @@ void VanetSim::ConfigApp()
 			Source.SetAttribute("PacketSize", UintegerValue (packetSize));
 			//install on node and set start time and stop time
 			m_source = Source.Install(m_nodes.Get(nodeNum+numofLC+i));//Insatll on Source1
-			m_source.Start(Seconds(140.0+i*0.01));
-			m_source.Stop(Seconds(250.0+i*0.01));//Default Start time is 0.
+			m_source.Start(Seconds(270.0+i*0.2));
+			m_source.Stop(Seconds(370.0+i*0.2));//Default Start time is 0.
 
 		    //statistics:trace function recall
 			std::string temp1 = "/NodeList/"+std::to_string (nodeNum+numofLC+i)+"/ApplicationList/0/$ns3::OnOffApplication/Tx";

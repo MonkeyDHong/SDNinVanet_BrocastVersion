@@ -34,6 +34,7 @@
 #include "ns3/traced-callback.h"
 #include "ns3/ipv4.h"
 #include "ns3/udp-header.h"
+#include "ns3/tcp-header.h"
 #include "ns3/ipv4-routing-protocol.h"
 #include "ns3/mobility-module.h"
 

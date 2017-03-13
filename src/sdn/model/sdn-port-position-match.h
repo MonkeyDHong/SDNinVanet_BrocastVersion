@@ -49,10 +49,7 @@ public:
 	uint32_t m_port6;
 	uint32_t m_port7;
 	uint32_t m_port8;
-	uint32_t m_port9;
-	uint32_t m_port10;
-	uint32_t m_port11;
-	uint32_t m_port12;
+
 	Port_Position_Match();
 
 	bool CheckThis(uint16_t port, Vector position);

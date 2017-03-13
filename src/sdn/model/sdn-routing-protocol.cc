@@ -403,6 +403,8 @@ RoutingProtocol::RouteInput(Ptr<const Packet> p,
 	//udp header
 	UdpHeader uheader;
 	p->PeekHeader(uheader);
+//	TcpHeader pheader;
+//	p->PeekHeader(pheader);
 	 //std::cout<<uheader.GetDestinationPort()<<"hope！"<<std::endl;
 	// Consume self-originated packets
 	//todo
@@ -490,7 +492,7 @@ RoutingProtocol::RouteInput(Ptr<const Packet> p,
 						<< (int) ipHeader.GetTtl() << std::flush;
 				if (!m_DD.CheckThis(p) && m_PPM.CheckThis(uheader.GetDestinationPort(), m_mobility->GetPosition()))
 				{
-					 std::cout<<Ipv4toString (m_SCHAddress)<<" 哭4"<<Ipv4toString (sour)<<std::endl;
+					 std::cout<<Ipv4toString (m_SCHAddress)<<":"<<uheader.GetDestinationPort()<<" 哭4"<<Ipv4toString (sour)<<std::endl;
 					ucb(broadcastRoute, p, ipHeader);
 					//mcb(realBroadcastRoute, p, ipHeader);
 				}
