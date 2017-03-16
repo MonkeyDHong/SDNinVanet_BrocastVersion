@@ -364,21 +364,21 @@ void VanetSim::ConfigMobility()
 	    Temp->SetPosition(Vector(1995.0, 3150.0, 0.0));
 
 	    Temp = m_nodes.Get(nodeNum+32)->GetObject<MobilityModel>();//Sink1
-	    Temp->SetPosition(Vector(3000.0, 995.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+33)->GetObject<MobilityModel>();//Sink2
 	    Temp->SetPosition(Vector(1995.0, 0.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+33)->GetObject<MobilityModel>();//Sink2
+	    Temp->SetPosition(Vector(3000.0, 995.0, 0.0));
 	    Temp = m_nodes.Get(nodeNum+34)->GetObject<MobilityModel>();//Sink3
-	    Temp->SetPosition(Vector(2005.0, 3000.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+35)->GetObject<MobilityModel>();//Sink4
 	    Temp->SetPosition(Vector(3000.0, 1995.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+35)->GetObject<MobilityModel>();//Sink4
+	    Temp->SetPosition(Vector(2005.0, 3000.0, 0.0));
 	    Temp = m_nodes.Get(nodeNum+36)->GetObject<MobilityModel>();//Sink5
-	    Temp->SetPosition(Vector(0.0, 2005.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+37)->GetObject<MobilityModel>();//Sink6
 	    Temp->SetPosition(Vector(1005.0, 3000.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+37)->GetObject<MobilityModel>();//Sink6
+	    Temp->SetPosition(Vector(0.0, 2005.0, 0.0));
 	    Temp = m_nodes.Get(nodeNum+38)->GetObject<MobilityModel>();//Sink7
-	    Temp->SetPosition(Vector(995.0, 0.0, 0.0));
-	    Temp = m_nodes.Get(nodeNum+39)->GetObject<MobilityModel>();//Sink8
 	    Temp->SetPosition(Vector(0.0, 1005.0, 0.0));
+	    Temp = m_nodes.Get(nodeNum+39)->GetObject<MobilityModel>();//Sink8
+	    Temp->SetPosition(Vector(995.0, 0.0, 0.0));
 
 }
 
@@ -538,7 +538,7 @@ void VanetSim::ConfigApp()
 		routing->SetControllArea (Vector2D (1010,990), Vector2D (1990,1000));
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+21)->GetObject<sdn::RoutingProtocol> ();
-		routing->SetControllArea (Vector2D (1990,1010),Vector2D (1010,990));//
+		routing->SetControllArea (Vector2D (1990,1010),Vector2D (1010,1000));//
 		routing->SetAlgo (ToBeSet);
 		routing = m_nodes.Get (nodeNum+22)->GetObject<sdn::RoutingProtocol> ();
 		routing->SetControllArea (Vector2D (2000,1010),Vector2D (2010,1990));//

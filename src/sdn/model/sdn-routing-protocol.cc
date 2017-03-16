@@ -1081,6 +1081,10 @@ RoutingProtocol::ProcessAckHello (const sdn::MessageHeader &msg)
 			{
 				std::cout << "NEWAREA" << Ipv4toString(ackhello.ID)
 						<< std::endl;
+				std::cout << m_lc_start.x << new_start.x << " " << m_lc_start.y
+						<< new_start.y << " " << m_lc_end.x << new_end.x << ""
+						<< m_lc_end.y << new_end.y << " "
+						<< Ipv4toString(ackhello.ID) << std::endl;
 				m_appointmentResult = NORMAL;
 			}
 		}
@@ -2323,9 +2327,17 @@ RoutingProtocol::CheckLink (Ipv4Address sour)
 {
 	bool ret = true;
 	std::list<Ipv4Address>::const_iterator fwci = m_forward_chain.begin();
-	if (CalculateDistance(
+	/*if (CalculateDistance(
 			Vector2D(m_lc_info[*fwci].Position.x, m_lc_info[*fwci].Position.y),
 			m_lc_start) < 0.5 * 0.5 * m_signal_range)
+	{
+		return false;
+	}*/
+	std::list<Ipv4Address>::const_iterator lastcar = m_forward_chain.end();
+	lastcar--;
+	if (CalculateDistance(
+			Vector2D(m_lc_info[*lastcar].Position.x, m_lc_info[*lastcar].Position.y),
+			m_lc_end) < 0.1 * 0.5 * m_signal_range)
 	{
 		return false;
 	}

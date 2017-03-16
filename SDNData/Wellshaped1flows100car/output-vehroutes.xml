@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Tue 14 Mar 2017 12:03:57 PM CST by SUMO gui Version 0.19.0
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo-sim.org/xsd/sumo-gui.exeConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/zenghaien/SUMO/route4/MySUMONet.net.xml"/>
+        <route-files value="/home/zenghaien/SUMO/route4/ex_ROU.rou.xml"/>
+    </input>
+
+    <output>
+        <netstate-dump value="/home/zenghaien/SUMO/route4/ex_sumo.sumo.tr"/>
+        <emission-output value="/home/zenghaien/SUMO/route4/output-emissions.xml"/>
+        <tripinfo-output value="/home/zenghaien/SUMO/route4/output-tripinfos.xml"/>
+        <vehroute-output value="/home/zenghaien/SUMO/route4/output-vehroutes.xml"/>
+        <save-state.prefix value="/home/zenghaien/SUMO/route4/state"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="2000"/>
+    </time>
+
+    <processing>
+        <route-steps value="-1"/>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <print-options value="false"/>
+    </report>
+
+    <random_number>
+        <seed value="23423"/>
+    </random_number>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo-sim.org/xsd/routes_file.xsd">
+</routes>
