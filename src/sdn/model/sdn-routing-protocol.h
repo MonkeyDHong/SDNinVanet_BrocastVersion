@@ -366,6 +366,7 @@ private:
   Port_Position_Match m_PPM;
   int sxjxw =0;
   bool CheckLink (Ipv4Address sour);
+  bool m_zero0NoCar;
 
 //statistic tools //todo change to private and wirte get
 public:

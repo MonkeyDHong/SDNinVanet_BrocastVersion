@@ -132,6 +132,7 @@ RoutingProtocol::RoutingProtocol ()
     m_car_lc_ack_vaild (false),
     m_lowerbound (0),
     m_algorithm (Binary_Search),
+	m_zero0NoCar(false),
 	//some variable setting
     m_road_length (814),//MagicNumber
     m_signal_range (419),
@@ -407,29 +408,6 @@ RoutingProtocol::RouteInput(Ptr<const Packet> p,
 //	p->PeekHeader(pheader);
 	 //std::cout<<uheader.GetDestinationPort()<<"hope！"<<std::endl;
 	// Consume self-originated packets
-	//todo
-//	if (uheader.GetDestinationPort() == (65419)
-//			&& (m_mobility->GetPosition().y > 990.0)
-//			&& !(m_mobility->GetPosition().x < 1000.0))
-//	{
-//		 //std::cout<<"161heng！"<<std::endl;
-//		return true;
-//	}
-//	if (uheader.GetDestinationPort() == (65420)
-//			&& ((m_mobility->GetPosition().y > 1000.0)
-//					|| (m_mobility->GetPosition().y < 990.0)))
-//	{
-//		 //std::cout<<"162heng！"<<std::endl;
-//		return true;
-//	}
-//	if (uheader.GetDestinationPort() == (65421)
-//			&& (((m_mobility->GetPosition().y < 1000.0)
-//					&& !(m_mobility->GetPosition().x < 1000.0))
-//					|| (m_mobility->GetPosition().y < 990.0)))
-//	{
-//		 //std::cout<<"163heng！"<<std::endl;
-//		return true;
-//	}
 	if (IsMyOwnAddress(sour) == true)
 	{
 		return true;
@@ -954,20 +932,31 @@ RoutingProtocol::ProcessHM (const sdn::MessageHeader &msg)
     {
       Ipv4Address ID = msg.GetHello ().ID;
       std::map<Ipv4Address, CarInfo>::iterator it = m_lc_info.find (ID);
+      double const vt = GetProjection(msg.GetHello ().GetVelocity());
       //todo
       //the car in the first area will not be considered until it had passed the half of the set zero
-     if(dabs(CalcDist (msg.GetHello ().GetPosition (), m_lc_start) ) < 0.5*0.5*m_signal_range)//||( dabs(CalcDist (msg.GetHello ().GetPosition (), m_lc_end) ) < 0.5*0.5*m_signal_range)
+     if(!m_zero0NoCar && dabs(CalcDist (msg.GetHello ().GetPosition (), m_lc_start) ) < 0.5*0.5*m_signal_range)//||( dabs(CalcDist (msg.GetHello ().GetPosition (), m_lc_end) ) < 0.5*0.5*m_signal_range)
       {
     	  std::cout<<Ipv4toString (m_SCHAddress)<<": "<<Ipv4toString (ID)<<" be ignored."<<std::endl;
+          //SendAckHello (ID);
     	  return;
       }
-     //todo
-     /*char a[14] = {"192.168.0.129"};
-      if(( dabs(CalcDist (msg.GetHello ().GetPosition (), m_lc_end) ) < 0.5*0.5*m_signal_range) && m_CCHAddress == Ipv4Address(a))//||
-      {
-          std::cout<<Ipv4toString (m_SCHAddress)<<" "<<Ipv4toString (ID)<<" be  ignored. by 129"<<std::endl;
-          return;
-      }*/
+     /*else if(dabs(CalcDist (msg.GetHello ().GetPosition (), m_lc_end)) < 1/80* m_signal_range
+    		 && vt < 2)
+     {
+    	 if (it != m_lc_info.end ())
+    	 {
+			if (it->second.appointmentResult == FORWARDER)
+			{
+				m_lc_info.erase(ID);
+				m_linkEstablished = false;
+				ComputeRoute();
+			}
+			else
+				m_lc_info.erase(ID);
+    	 }
+         return;
+     }*/
 
       if (it != m_lc_info.end ())
         {
@@ -978,11 +967,12 @@ RoutingProtocol::ProcessHM (const sdn::MessageHeader &msg)
           Vector3D oldV = it->second.Velocity;
           it->second.Position = msg.GetHello ().GetPosition ();
           it->second.Velocity = msg.GetHello ().GetVelocity ();
-          if (it->second.Velocity.x+it->second.Velocity.y+it->second.Velocity.z < 1)//To prevent Dead Point
+          /*if (it->second.Velocity.x+it->second.Velocity.y+it->second.Velocity.z < 1)//To prevent Dead Point
             {
               it->second.Velocity.z = 10;
-            }
-          //std::cout<<Ipv4toString (m_SCHAddress)<<"ProcessHM-updatenormal:"<<Ipv4toString (ID)<<",("<<it->second.Position.x<<","<<it->second.Position.y<<")"<<std::endl;
+            }*/
+           //std::cout<<Ipv4toString (m_SCHAddress)<<"ProcessHM-updatenormal:"<<Ipv4toString (ID)<<",("<<it->second.Position.x<<","<<it->second.Position.y<<")"<<std::endl;
+
           if (it->second.appointmentResult == FORWARDER)
             {
               std::cout<<Ipv4toString (m_SCHAddress)<<"ProcessHM-update:"<<Ipv4toString (ID)<<",("<<it->second.Position.x<<","<<it->second.Position.y<<")"<<std::endl;
@@ -1001,10 +991,10 @@ RoutingProtocol::ProcessHM (const sdn::MessageHeader &msg)
           CI_temp.LastActive = Simulator::Now ();
           CI_temp.Position = msg.GetHello ().GetPosition ();
           CI_temp.Velocity = msg.GetHello ().GetVelocity ();
-          if (CI_temp.Velocity.x+CI_temp.Velocity.y+CI_temp.Velocity.z < 1)//To prevent Dead Point
+          /*if (CI_temp.Velocity.x+CI_temp.Velocity.y+CI_temp.Velocity.z < 1)//To prevent Dead Point
             {
               CI_temp.Velocity.z = 10;
-            }
+            }*/
           m_lc_info[ID] = CI_temp;
           std::cout<<Ipv4toString (m_SCHAddress)<<"ProcessHM-new:"<<Ipv4toString (ID)<<",("<<msg.GetHello ().GetPosition ().x<<","<<msg.GetHello ().GetPosition ().y<<")"<<std::endl;
         }
@@ -1024,10 +1014,10 @@ RoutingProtocol::ProcessHM (const sdn::MessageHeader &msg)
         Vector3D oldV = it->second.Velocity;
         it->second.Position = msg.GetHello ().GetPosition ();
         it->second.Velocity = msg.GetHello ().GetVelocity ();
-        if (it->second.Velocity.x+it->second.Velocity.y+it->second.Velocity.z < 1)//To privent Dead Point
+        /*if (it->second.Velocity.x+it->second.Velocity.y+it->second.Velocity.z < 1)//To privent Dead Point
           {
             it->second.Velocity.z = 10;
-          }
+          }*/
         if (it->second.appointmentResult == FORWARDER)
           {
         	std::cout<<Ipv4toString (m_SCHAddress)<<"ProcessHM-leaved:"<<Ipv4toString (ID)<<",("<<msg.GetHello ().GetPosition ().x<<","<<msg.GetHello ().GetPosition ().y<<")"<<std::endl;
@@ -1210,6 +1200,7 @@ RoutingProtocol::ComputeRoute()
 		}
 		if (m_linkEstablished)
 		{
+			m_zero0NoCar=false;
 			SendLc2Lc();
 			 std::cout << Ipv4toString(m_CCHAddress) << " SendLC2LC"
 					<< std::endl;
@@ -1323,13 +1314,13 @@ RoutingProtocol::GetShortHop(const Ipv4Address& IDa, const Ipv4Address& IDb)
 
 	const double safe_range = m_signal_range * m_safety_raito;
 
-	if (vb > 0)
+	if (vb > 2)//7.2km/h
 	{
 		temp = (m_road_length - db) / vb;
 	}
 	else
 	{
-		//b is fixed. Just in case
+		//If b is fixed. Just in case
 		temp = (m_road_length - da) / va;
 	}
 	double const t2bl = temp; // time to b left
@@ -1831,7 +1822,7 @@ RoutingProtocol::Reschedule ()
 		{
 			m_apTimer.Remove();
 		}
-		m_apTimer.Schedule(Seconds(t2l));
+		m_apTimer.Schedule(Seconds(t2l/5));
 		//std::cout<<"Reschedule:"<<t2l<<"s."<<"p:"<<dx<<",v:"<<vx<<std::endl;
 	}
 }
@@ -1993,6 +1984,8 @@ RoutingProtocol::SelectNode ()
 	else
 	{
 		m_linkEstablished = false;
+		m_zero0NoCar = true;
+		std::cout<<"in The_Car = Zero"<<std::endl;
 	}
 	m_forward_chain.clear();
 	//std::cout<<"Chain ";
@@ -2017,12 +2010,17 @@ RoutingProtocol::SelectNode ()
 		if (vx < 1e-7)
 		{
 			m_linkEstablished = false;
+			std::cout<<"in vx < 1e-7"<<std::endl;
 		}
 		else
 		{
 			t2l = (0.5 * m_signal_range - dx) / vx;
 			if (t2l < 1)
+			{
 				m_linkEstablished = false;
+				std::cout<<"in t2l < 1"<<std::endl;
+			}
+
 		}
 	}
 }

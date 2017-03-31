@@ -1,12 +1,19 @@
 <flows>   
-<vType  id="passenger" accel="2.9" decel="7.5" sigma="0.5" length="4.3" minGap="2.5" maxSpeed="23.3333" color="1,1,0" speedFactor="1.0"  speedDev="0.1" />
-<flow id="0" type="passenger" from="edge1" to="edge2"  begin="0" end="250"  number="50" 
-departLane="random" departSpeed="random" departPos="base" 
-/>
-<flow id="1" type="passenger" from="edge1" to="edge3"  begin="0" end="250"  number="50" 
-departLane="random" departSpeed="random" departPos="base" 
-/>
-<flow id="2" type="passenger" from="edge1" to="edge4"  begin="0" end="250"  number="50" 
-departLane="random" departSpeed="random" departPos="base" 
-/>
+<flow id="flow0" from="edge-11-8" to="edge-5-2" begin="0" end="1000"   
+number="100" departlane="random" departpos="base"/>   
+<flow id="flow1" from="edge-2-5" to="edge-8-11" begin="0" end="1000"   
+number="100" departlane="random" departpos="base" />  
+<flow id="flow2" from="edge-12-9" to="edge-4-1" begin="0" end="1000"   
+number="100" departlane="random" departpos="base" />  
+<flow id="flow3" from="edge-1-4" to="edge-9-12" begin="0" end="1000"   
+number="100" departlane="random" departpos="base" />  
+<flow id="flow4" from="edge-10-9" to="edge-4-3" begin="0" end="1000"
+number="100" departlane="random" departpos="base" />  
+<flow id="flow5" from="edge-3-4" to="edge-9-10" begin="0" end="1000"   
+number="100" departlane="random" departpos="base" />  
+<flow id="flow6" from="edge-6-5" to="edge-8-7" begin="0" end="1000"   
+number="100" departlane="random" departpos="base" />  
+<flow id="flow7" from="edge-7-8" to="edge-5-6" begin="0" end="1000"   
+number="100" departlane="random" departpos="base" />  
+ 
 </flows>
