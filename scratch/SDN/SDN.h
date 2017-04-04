@@ -27,6 +27,7 @@
 
 //FINALLY!
 #include "ns3/sdn-helper.h"
+#include "ns3/db-helper.h"
 #include "ns3/vanetmobility-helper.h"
 
 #include <unordered_set>
@@ -122,3 +123,4 @@ private:
 };
 
 #endif /* SDN_H */
+

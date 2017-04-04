@@ -130,7 +130,7 @@ void VanetSim::ParseArguments(int argc, char *argv[])
 	cmd.AddValue ("range1", "Range for SCH", range1);
 	cmd.AddValue ("range2", "Range for CCH", range2);
 	cmd.AddValue ("verbose", "turn on all WifiNetDevice log components", verbose);
-	cmd.AddValue ("mod", "0=olsr 1=bs-sdn(DEFAULT) 2=aodv 3=dsdv 4=dsr 5=yangs-sdn", mod);
+	cmd.AddValue ("mod", "0=olsr 1=bs-sdn(DEFAULT) 2=aodv 3=dsdv 4=dsr 5=yangs-sdn 6 =DB", mod);
 	cmd.AddValue ("ds", "DataSet", m_ds);
 	cmd.Parse (argc,argv);
 
@@ -151,8 +151,11 @@ void VanetSim::ParseArguments(int argc, char *argv[])
     case 5:
       m_todo = "YANGS-SDN";
       break;
+    case 6:
+      m_todo = "YANGS-SDN";
+      break;
     default:
-      m_todo = "BS-SDN";
+      m_todo = "DB";
       mod = 1;
       break;
 	}
@@ -400,6 +403,7 @@ void VanetSim::ConfigApp()
 	DsdvHelper dsdv;
 	DsrHelper dsr;
 	DsrMainHelper dsrMain;
+	DbHelper db;
 	switch (mod)
 	  {
       case 0:
@@ -425,6 +429,12 @@ void VanetSim::ConfigApp()
         dsrMain.Install (dsr, m_nodes);
          std::cout<<"DSRMain"<<std::endl;
         os<<"DSRMain"<<std::endl;
+        break;
+      case 6:
+          internet.SetRoutingHelper(db);
+          internet.Install (m_nodes);
+         std::cout<<"DB"<<std::endl;
+        os<<"DB"<<std::endl;
         break;
       default:
         for (uint32_t i = 0; i<nodeNum; ++i)
@@ -816,5 +826,6 @@ int main(int argc, char *argv[])
 	SDN_test.Simulate(argc, argv);
 	return 0;
 }
+
 
 

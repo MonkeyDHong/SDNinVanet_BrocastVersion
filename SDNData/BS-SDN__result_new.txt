@@ -1,2 +1,629 @@
 Mode:  BS-SDNDataSet:  
-Starting simulation for 432 s ...
+Starting simulation for 1465 s ...
+Now:0  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:1  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:2  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:3  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:4  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:5  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:6  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:7  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:8  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:9  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:10  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:11  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:12  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:13  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:14  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:15  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:16  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:17  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Now:18  Mode: BS-SDN  ,DataSet: 
+Source0:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source1:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source2:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source3:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source4:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source5:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source6:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0
+Source7:
+	Tx_Data_Pkts:   0
+	Rx_Data_Pkts:   0
+	Unique_RX_Pkts: 0

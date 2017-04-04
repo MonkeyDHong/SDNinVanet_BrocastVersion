@@ -1,0 +1,26 @@
+Mode:  DataSet:  8flows3segmentsrandom200-300
+Starting simulation for 1465 s ...
+Best delay:   4550us
+Worst delay:   4969us
+Avg delay: 4702.64us
+Best delay:   4133us
+Worst delay:   4969us
+Avg delay: 4604.94us
+Best delay:   4550us
+Worst delay:   4969us
+Avg delay: 4630.94us
+Best delay:   4550us
+Worst delay:   4969us
+Avg delay: 4564.99us
+Best delay:   4133us
+Worst delay:   4969us
+Avg delay: 4762.71us
+Best delay:   4132us
+Worst delay:   4551us
+Avg delay: 4538.26us
+Best delay:   4132us
+Worst delay:   4969us
+Avg delay: 4629.77us
+Best delay:   4133us
+Worst delay:   4969us
+Avg delay: 4560.19us
